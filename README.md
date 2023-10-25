@@ -1,6 +1,7 @@
 # klasterizaciya
 # ЗАДАНИЕ 1
 Код в конфигурационном файле haproxy.cfg добавил:
+```YAML
 listen stats  # веб-страница со статистикой
         bind                    :888
         mode                    http
@@ -21,8 +22,10 @@ backend web_servers    # секция бэкенд
         http-check send meth GET uri /index.html
         server s1 127.0.0.1:8888 check
         server s2 127.0.0.1:9999 check
+ ```
 # ЗАДАНИЕ 2
 Код в конфигурационном файле haproxy.cfg добавил:
+```YAML
 frontend example  # секция фронтенд
         mode http
         bind :8088
@@ -37,3 +40,4 @@ backend web_servers    # секция бэкенд
         server s1 127.0.0.1:6666 weight 2 check
         server s2 127.0.0.1:8888 weight 3 check
         server s3 127.0.0.1:9999 weight 4 check
+ ```
