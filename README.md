@@ -23,6 +23,7 @@ backend web_servers    # секция бэкенд
         server s1 127.0.0.1:8888 check
         server s2 127.0.0.1:9999 check
  ```
+![alt text](https://github.com/StepanovSA/klasterizaciya/blob/main/25.10%20haproxy1.PNG)
 # ЗАДАНИЕ 2
 Код в конфигурационном файле haproxy.cfg добавил:
 ```YAML
@@ -41,3 +42,4 @@ backend web_servers    # секция бэкенд
         server s2 127.0.0.1:8888 weight 3 check
         server s3 127.0.0.1:9999 weight 4 check
  ```
+![alt text](https://github.com/StepanovSA/klasterizaciya/blob/main/25.10%20haproxy2.PNG)
